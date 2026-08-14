@@ -6,11 +6,13 @@ Approach: Bit Manipulation (XOR)
 Time Complexity: O(n)
 Space Complexity: O(1)
 */
- int singleNumber(vector<int>& nums) {
-        int ans = 0;
-
-        for (int num : nums) {
-            ans = ans ^ num;
-        }
-
-        return ans;
+ class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int x = 0;
+  for(int i = 0; i<nums.size();i++){
+     x = x^nums[i];
+  }
+  return x;
+    }
+};

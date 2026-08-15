@@ -1,0 +1,95 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node{
+ int data;
+ struct node* next;
+
+}nd;
+nd *ptr=NULL ,*head=NULL, *newnode=NULL;
+void create();
+void display();
+void sort();
+int main(){
+ create();
+printf("before sort\n");
+ display();
+
+ sort();
+ printf("After sort\n");
+ display();
+
+return 0;
+}
+void create(){
+int n;
+printf("enter n value\n");
+scanf("%d", &n);
+while( n != -1){
+    newnode = (nd*)malloc(sizeof(nd));
+    if(newnode==NULL){
+        printf("ll doesn,t exist\n");
+        exit(0);
+    }
+    else {
+            newnode->data = n;
+            newnode->next = NULL;
+        if(head == NULL){
+            head = newnode;
+        }
+        else{
+             ptr = head;
+             while(ptr -> next != NULL){
+                ptr = ptr->next;
+             }
+             ptr->next = newnode;
+
+        }
+
+    }
+    printf("enter -1 to stop entering data\n");
+    scanf("%d",&n);
+
+}
+
+}
+void display(){
+
+ if( head == NULL){
+    printf("ll doesn,t exist\n");
+ }
+ else
+ {
+     ptr = head;
+     while (ptr != NULL){
+        printf("%d\t",ptr->data);
+        ptr = ptr->next;
+     }
+
+ }
+
+}
+void sort(){
+    nd *ptr1;
+    int temp;
+if(head == NULL){
+    printf("linked list is empty\n");
+    return ;
+}
+ptr = head;
+ptr1 = ptr->next;
+while( ptr->next != NULL){
+ptr1 = ptr->next;
+    while( ptr1 != NULL){
+        if(ptr->data > ptr1->data){
+             temp = ptr->data;
+            ptr->data = ptr1->data;
+            ptr1->data = temp;
+        }
+        ptr1 = ptr1->next;
+    }
+    ptr = ptr->next;
+}
+
+}
+

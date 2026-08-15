@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1764430993 source:c:\users\sai nived\onedrive\desktop\cpp\c programs\hello world.c
+	<stdio.h>
+
+1764431033 source:c:\users\sai nived\onedrive\desktop\cpp\c programs\main.c
+	<stdio.h>
+
+1764431671 source:c:\users\sai nived\onedrive\desktop\cpp\c programs\add.c
+	<stdio.h>
+
+1764432375 source:c:\users\sai nived\onedrive\desktop\cpp\c programs\sub.c
+	<stdio.h>
+
+1764432423 source:c:\users\sai nived\onedrive\desktop\cpp\c programs\mult.c
+	<stdio.h>
+

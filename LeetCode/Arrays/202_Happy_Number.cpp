@@ -8,31 +8,24 @@ Space Complexity: O(1)
 */
 class Solution {
 public:
-    int sumSquares(int n) {
-        int sum = 0;
-
-        while (n > 0) {
-            int digit = n % 10;
-            sum += digit * digit;
-            n /= 10;
-        }
-
-        return sum;
-    }
-
     bool isHappy(int n) {
-        unordered_set<int> seen;
-
-        while (n != 1) {
-            if (seen.count(n))
-                return false;
-
-            seen.insert(n);
-            n = sumSquares(n);
+        unordered_set<int >s;
+        while( n != 1){
+            if (s.count(n))
+             return false;
+             s.insert(n);
+             int s = 0;
+             while( n> 0)
+             {
+                int r= n%10;
+             s += r*r;
+              n = n/10;
+             }
+             n = s;
         }
-
         return true;
-    
+    }
+};
         
     }
 };
